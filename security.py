@@ -1,5 +1,5 @@
 from werkzeug.security import safe_str_cmp
-from pythonProject.starter_code.models.users import UserModel
+from models.users import UserModel
 
 def authenticate(username, password):
     """
