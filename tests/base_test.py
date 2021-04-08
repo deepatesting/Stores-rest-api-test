@@ -8,8 +8,8 @@ and makes sure it is a new, blank database each time.
 """
 from unittest import TestCase
 
-from pythonProject.starter_code.app import app
-from pythonProject.starter_code.db import db
+from app import app
+from db import db
 
 class BaseTest(TestCase):
     @classmethod
