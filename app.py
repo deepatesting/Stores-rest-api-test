@@ -5,10 +5,10 @@ from flask_restful import Api
 from flask_jwt import JWT, JWTError, jwt_required
 
 
-from pythonProject.starter_code.resources.item import Item, ItemList
-from pythonProject.starter_code.resources.store import Store, StoreList
-from pythonProject.starter_code.resources.users import UserRegister, UserList, UserDelete
-from pythonProject.starter_code.security import authenticate, identity
+from resources.item import Item, ItemList
+from resources.store import Store, StoreList
+from resources.users import UserRegister, UserList, UserDelete
+from security import authenticate, identity
 
 app = Flask(__name__)
 
