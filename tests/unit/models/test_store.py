@@ -1,6 +1,6 @@
-from pythonProject.starter_code.tests.unit.unit_base_test import UnitBaseTest
+from tests.unit.unit_base_test import UnitBaseTest
 
-from pythonProject.starter_code.models.store import StoreModel
+from models.store import StoreModel
 
 class StoreTest(UnitBaseTest):
     def test_create_store(self):
