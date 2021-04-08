@@ -1,4 +1,4 @@
-from pythonProject.starter_code.db import db
+from db import db
 
 
 class UserModel(db.Model):
