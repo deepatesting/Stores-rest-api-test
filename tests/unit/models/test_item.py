@@ -1,6 +1,6 @@
-from pythonProject.starter_code.tests.unit.unit_base_test import UnitBaseTest
+from tests.unit.unit_base_test import UnitBaseTest
 
-from pythonProject.starter_code.models.item import ItemModel
+from models.item import ItemModel
 
 class ItemTest(UnitBaseTest):
     def test_create_item(self):
