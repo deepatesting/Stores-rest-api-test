@@ -6,7 +6,7 @@ class StoreTest(BaseTest):
     def test_create_store_items_empty(self):
         store = StoreModel("test_store")
 
-        self.assertListEqual(store.items.all(), [], "The store 's items lenght was not 0 even though no items added.")
+        self.assertListEqual(store.items.all(), [], "The store 's items length was not 0 even though no items added.")
 
     def test_crud(self):
         with self.app_context():
@@ -40,6 +40,7 @@ class StoreTest(BaseTest):
         store = StoreModel('Test_Store')
 
         expected = {
+            'id': None,
             'name': 'Test_Store',
             'items': []
         }
@@ -54,6 +55,7 @@ class StoreTest(BaseTest):
             item.save_to_db()
 
             expected = {
+                'id': 1,    
                 'name': 'Test_Store',
                 'items': [{'name': 'test_item', 'price': 19.99}]
             }
