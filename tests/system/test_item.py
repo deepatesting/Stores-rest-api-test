@@ -1,8 +1,8 @@
 import json
-from pythonProject.starter_code.models.item import ItemModel
-from pythonProject.starter_code.models.store import StoreModel
-from pythonProject.starter_code.models.users import UserModel
-from pythonProject.starter_code.tests.base_test import BaseTest
+from models.item import ItemModel
+from models.store import StoreModel
+from models.users import UserModel
+from tests.base_test import BaseTest
 
 class ItemTest(BaseTest):
     def setUp(self):
