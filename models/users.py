@@ -1,0 +1,33 @@
+from pythonProject.starter_code.db import db
+
+
+class UserModel(db.Model):
+    __tablename__ = 'users'
+
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80))
+    password = db.Column(db.String())
+
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
+
+    @classmethod
+    def find_by_username(cls, username):
+        # print(cls.query.filter_by(username=username).first())
+        return cls.query.filter_by(username=username).first()  # The first() function will return first row else None.
+
+    @classmethod
+    def find_by_id(cls, _id):
+        return cls.query.filter_by(id=_id).first()  # The first() function will return first row else None.
+
+    def save_to_db(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def json(self):
+        return {'name': self.username}
+
+    def delete_from_db(self):
+        db.session.delete(self)
+        db.session.commit()
