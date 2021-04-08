@@ -1,6 +1,6 @@
-from pythonProject.starter_code.tests.unit.unit_base_test import UnitBaseTest
+from tests.unit.unit_base_test import UnitBaseTest
 
-from pythonProject.starter_code.models.users import UserModel
+from models.users import UserModel
 
 class UserTest(UnitBaseTest):
     def test_create_user(self):
