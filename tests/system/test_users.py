@@ -1,7 +1,7 @@
 import json
 
-from pythonProject.starter_code.models.users import UserModel
-from pythonProject.starter_code.tests.base_test import BaseTest
+from models.users import UserModel
+from tests.base_test import BaseTest
 
 class UserTest(BaseTest):
     def test_register_user(self):
